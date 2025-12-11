@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-main, serif);
+  font-family: var(--font-main, serif), sans-serif;
   font-variation-settings: 'wght' var(--main-font-weight, 410);
   background-color: var(--background-color, #fff);
   background-image: var(--background-image);
@@ -26,15 +26,14 @@
 }
 
 .container {
-  inline-size: clamp(320px, 50%, 700px);
+  inline-size: clamp(375px, 50%, 700px);
   margin: 0 auto;
 }
 
 .header {
-  display: grid;
   background-color: var(--background-color, #fff);
   border: 2px solid var(--content-color, #000);
-  font-family: var(--font-accent, serif);
+  font-family: var(--font-accent, serif), sans-serif;
   text-align: center;
   padding-block-start: clamp(122px, calc(119.18px + 0.751vw), 130px);
   padding-block-end: clamp(118px, calc(114.48px + 0.939vw), 128px);
@@ -118,7 +117,7 @@
   z-index: 10;
   opacity: 0.5;
   color: var(--content-color, #000);
-  font-family: var(--font-accent, serif);
+  font-family: var(--font-accent, serif), sans-serif;
   font-size: 14px;
   inset-block-start: 25px;
   inset-inline-end: 25px;
@@ -156,7 +155,7 @@
 .card_button-container {
   display: flex;
   align-self: flex-end;
-  gap: 12px;
+  gap: 8px;
 }
 
 .card__icon-button {
@@ -164,9 +163,11 @@
   cursor: pointer;
   block-size: 34px;
   inline-size: 39px;
-  border: none;
+  border: 2px solid transparent;
+  padding: 0;
   outline: none;
   transition: outline 0.3s ease;
+  align-self: center;
 }
 
 .card__icon-button:focus {
@@ -284,7 +285,7 @@
   position: relative;
   z-index: 1;
   color: var(--button-text-color, #fff);
-  font-family: var(--font-accent, serif);
+  font-family: var(--font-accent, serif), sans-serif;
   font-size: 14px;
   mix-blend-mode: difference;
 }
@@ -295,25 +296,22 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  inline-size: clamp(5.25rem, -7.9605rem + 66.0526vw, 20.9375rem);
-  margin-block-end: clamp(6.25rem, 6.184rem + 0.2817vw, 6.4375rem);
-  padding-block: 15px;
+  padding: 15px 20px;
 }
 
 .save-icon {
   inline-size: 21px;
   block-size: 21px;
-	color: var(--button-text-color, #fff);
+  color: var(--button-text-color, #fff);
   mix-blend-mode: difference;
 }
 
 .dialog__text {
   color: var(--button-text-color, #fff);
-  font-family: var(--font-accent, serif);
+  font-family: var(--font-accent, serif), sans-serif;
   font-size: 14px;
   mix-blend-mode: difference;
   min-inline-size: clamp(12.375rem, 11.5827rem + 3.3803vw, 14.625rem);
-  line-height: 150%;
 }
 
 .dialog__container {
@@ -325,6 +323,7 @@
 
 .dialog__container .dialog__text {
   text-transform: uppercase;
+  line-height: 150%;
 }
 
 dialog[open] {
